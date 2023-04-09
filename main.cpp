@@ -46,7 +46,7 @@ int main()
         
         cout << sortedList[i] << " ";
     }
-    cout<<sortedList[list.size()];
+    cout<<sortedList[list.size()-1];
 
 
     return 0;
