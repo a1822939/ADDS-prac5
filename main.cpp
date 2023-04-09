@@ -10,7 +10,6 @@ using namespace std;
 int main()
 {
 
-    BubbleSort s1;
     QuickSort s2;
     RecursiveBinarySearch s3;
 
@@ -41,12 +40,12 @@ int main()
         cout << "false ";
     }
 
-    for (int i = 0; i < list.size()-1; i++)
+    for (int i = 0; i < list.size(); i++)
     {
         
         cout << sortedList[i] << " ";
     }
-    cout<<sortedList[list.size()-1];
+    //cout<<sortedList[list.size()-1];
 
 
     return 0;
