@@ -9,24 +9,18 @@ using namespace std;
 
 int main()
 {
-
     QuickSort s2;
     RecursiveBinarySearch s3;
 
     vector<int> list;
-    string input_string;
-    int temp;
+    string input;
+    getline(cin, input);
+    istringstream iss(input);
 
-    getline(cin, input_string);
-    stringstream ss(input_string);
-
-    while (ss >> temp)
+    int num;
+    while (iss >> num)
     {
-        list.push_back(temp);
-        if (ss.peek() == ' ')
-        {
-            ss.ignore();
-        }
+        list.push_back(num);
     }
 
     vector<int> sortedList = s2.sort(list);

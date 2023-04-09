@@ -22,23 +22,25 @@ bool RecursiveBinarySearch::search(std::vector<int> list, int target)
             return false;
         }
     }
-    int midPointIndex = list.size() / 2;
+    int midPointIndex = (list.size()/2);
     std::vector<int>::const_iterator first;
     std::vector<int>::const_iterator last;
 
     if (target < list[midPointIndex])
     {
         first = list.begin();
-        last = list.begin()+midPointIndex-1;
+        last = list.begin()+midPointIndex;
     }
     else if (target > list[midPointIndex])
     {
         first = list.begin()+midPointIndex+1;
         last = list.end();
     }
+    else if (target == list[midPointIndex])
+    {
+        return true;
+    }
 
     std::vector<int> newList(first, last);
     return search(newList, target);
-
-    return true;
 }
