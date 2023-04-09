@@ -45,7 +45,7 @@ int main()
     {
         cout << sortedList[i] << " ";
     }
-    cout << endl;
+
 
     return 0;
 }
