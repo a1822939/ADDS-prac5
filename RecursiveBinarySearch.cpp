@@ -11,17 +11,15 @@ RecursiveBinarySearch::~RecursiveBinarySearch()
 
 bool RecursiveBinarySearch::search(std::vector<int> list, int target)
 {
-    if (list.size() == 1)
+    if (list.size() == 0)
     {
-        if (list[0] == target)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return false;
     }
+    else if (list.size() == 1)
+    {
+        return list[0] == target;
+    }
+
     int midPointIndex = (list.size()/2);
     std::vector<int>::const_iterator first;
     std::vector<int>::const_iterator last;
