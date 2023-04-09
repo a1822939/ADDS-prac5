@@ -1,25 +1,27 @@
 #include "Sort.h"
 #include "BubbleSort.h"
 #include "QuickSort.h"
+#include "RecursiveBinarySearch.h"
 #include <vector>
 #include<iostream>
 using namespace std;
 
 int main()
 {
+
     BubbleSort s1;
     QuickSort s2;
+    RecursiveBinarySearch s3;
 
-    vector<int> list = {5, 3, 6, 2, 6, 8, 9, 2, 1, 13, 6, 0};
+    vector<int> list = {1, 3, 5, 4, -5, 100, 7777, 2014};
 
-    vector<int> newList;
 
-    newList = s2.sort(list);
+    vector<int> sortedList = s2.sort(list);
 
-    for (int i = 0; i < newList.size(); i++)
-    {
-            cout << newList.at(i) << endl;
-    }
+
+    cout<<s3.search(sortedList, 7777)<<endl;
+
+
 
     return 0;
 }
