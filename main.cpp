@@ -23,7 +23,7 @@ int main()
     while (ss >> temp)
     {
         list.push_back(temp);
-        if (ss.peek() == ' ' || ss.peek() == '\n' || ss.peek() == '\r')
+        if (ss.peek() == ' ')
         {
             ss.ignore();
         }
@@ -40,13 +40,11 @@ int main()
         cout << "false ";
     }
 
-    for (int i = 0; i < list.size(); i++)
+    for (int i = 0; i < sortedList.size(); i++)
     {
-        
+
         cout << sortedList[i] << " ";
     }
-    //cout<<sortedList[list.size()-1];
-
 
     return 0;
 }
