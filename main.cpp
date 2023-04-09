@@ -41,10 +41,12 @@ int main()
         cout << "false ";
     }
 
-    for (int i = 0; i < list.size(); i++)
+    for (int i = 0; i < list.size()-1; i++)
     {
+        
         cout << sortedList[i] << " ";
     }
+    cout<<sortedList[list.size()];
 
 
     return 0;
