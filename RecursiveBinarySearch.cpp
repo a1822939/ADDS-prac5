@@ -29,11 +29,11 @@ bool RecursiveBinarySearch::search(std::vector<int> list, int target)
     if (target < list[midPointIndex])
     {
         first = list.begin();
-        last = list.begin()+midPointIndex;
+        last = list.begin()+midPointIndex-1;
     }
     else if (target > list[midPointIndex])
     {
-        first = list.begin()+midPointIndex;
+        first = list.begin()+midPointIndex+1;
         last = list.end();
     }
 
